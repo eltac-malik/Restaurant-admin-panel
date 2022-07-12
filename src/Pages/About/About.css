@@ -1,0 +1,96 @@
+.about
+{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 50px;
+}
+
+.submit-emp
+{
+    width: 80%;
+    height: 100px;
+    padding: 0 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(1, 126, 126, 0.644);
+    border-radius: 10px;
+}
+.submit-emp p
+{
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+}
+.submit-prod
+{
+    margin-top: 30px;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    padding-top: 20px;
+    flex-direction: column;
+    height: 500px;
+    border-radius: 10px;
+    border: 1px solid rgba(1, 126, 126, 0.644);
+}
+
+.prods
+{
+    width: 90%;
+    height: 70px;
+    border-radius: 10px;
+    padding: 0 100px;
+    margin: 5px 0;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(1, 126, 126, 0.644);
+    color: white;
+}
+.prods p
+{
+    margin-top: 15px;
+}
+
+.submit-img
+{
+    width: 35px;
+    height: 35px;
+}
+.submit-img img
+{
+    width: 100%;
+}
+.btns
+{
+    width: 40%;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btns button
+{
+    display: block;
+    width: 300px;
+    height: 60px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.bad
+{
+    background-color: red;
+}
+.good
+{
+    background-color: green;
+}

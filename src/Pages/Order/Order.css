@@ -171,6 +171,14 @@
     padding:15px;
     border-radius: 10px;
 }
+.columns
+{
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 0%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
 .last-img
 {
     width: 200px;
@@ -186,4 +194,94 @@
 .emp-h1
 {
     color: rgba(1, 126, 126, 0.911);
+}
+.prod
+{
+    width: 90%;
+    height: 50px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    padding: 0 50px;
+    justify-content: space-between;
+    border: 1px solid  rgba(1, 126, 126, 0.911);
+}
+.prod-name
+{
+    width: 200px;
+    margin-top: 10px;
+}
+.basket-img
+{
+    width: 40px;
+    height: 40px;
+}
+.basket-img img
+{
+    width: 100%;
+}
+.change
+{
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.change button
+{
+    border: none;
+    outline: none;
+    padding: 1px 8px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    background-color: rgba(1, 126, 126, 0.911);
+    color: white;
+    font-weight: bold;
+}
+
+.change span
+{
+    margin: 0 10px;
+}
+
+.delete
+{
+    border: none;
+    background-color: red;
+    padding: 3px 5px;
+    border-radius: 3px;
+    color: white;
+    font-weight: bold;
+
+}
+.delete:hover
+{
+    background-color: rgb(196, 4, 4);
+    transition: 0.3s;
+}
+
+.basket-btn
+{
+    width: 50%;
+    height: 60px;
+    border: none;
+    color: white;
+    border-radius: 10px;
+    font-size: 30px;
+
+}
+
+.add-basket
+{
+    background-color: rgba(1, 126, 126, 0.911);
+}
+.del-basket
+{
+    margin-top: 30px;
+    background-color: rgb(168, 2, 2);
 }

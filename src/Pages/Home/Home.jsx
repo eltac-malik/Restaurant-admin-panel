@@ -1,75 +1,20 @@
-import React,{useState} from "react";
-import {useSelector} from 'react-redux'
+import React,{useState,useEffect} from "react";
+import {useSelector,useDispatch} from 'react-redux'
 import "../Home/Home.css";
 import { Link } from "react-router-dom";
 
 function Home() {
-  const y = useSelector(state => state.order.orders);
-  console.log(y);
-  const a = [
-    {
-      sira: 1,
-      masa: 3,
-      xid: "eltac",
-      status: "gozleyen",
-      mebleg: 23,
-      son: 12,
-    },
-    {
-      sira: 2,
-      masa: 5,
-      xid: "eltsds",
-      status: "sonlanan",
-      mebleg: 2003,
-      son: 12,
-    },
-    {
-      sira: 1,
-      masa: 3,
-      xid: "eltac",
-      status: "legv",
-      mebleg: 23,
-      son: 12,
-    },
-    {
-      sira: 1,
-      masa: 3,
-      xid: "eltac",
-      status: "gozleyen",
-      mebleg: 23,
-      son: 12,
-    },
-    {
-      sira: 1,
-      masa: 3,
-      xid: "eltac",
-      status: "sonlanan",
-      mebleg: 3,
-      son: 12,
-    },
-    {
-      sira: 1,
-      masa: 3,
-      xid: "eltac",
-      status: "legv",
-      mebleg: 23,
-      son: 12,
-    },
-    {
-      sira: 1,
-      masa: 3,
-      xid: "eltac",
-      status: "sonlanan",
-      mebleg: 23,
-      son: 12,
-    },
-  ];
 
+  const [y,setY] = useState([])
 
-  const [colorSt,setColorSt] = useState("yellow-st")
+  useEffect(()=>
+  {
+    JSON.parse(localStorage.getItem("ls"))&&setY(JSON.parse(localStorage.getItem("ls")))
+  },[])
+
 
   const [filtered,setFiltered] = useState("")
-  let x = a.filter(e=> 
+  let x = y.filter(e=> 
     {
       if (filtered === "hami")
       {
@@ -81,16 +26,19 @@ function Home() {
       }
     })
 
+    console.log(y);
 
-    let dailySum = a.filter(e=> e.status === "sonlanan")
+    let dailySum = y.filter(e=> e.status === "sonlanan")
     let s = 0;
     dailySum.forEach(e=>
       {
-        s=s+e.mebleg;
+        let x = e.mebleg
+        s=s+parseInt(x);
       })
 
-
-
+      let wait = x.filter(e=> e.status === 'gozleyen')
+      let complated = x.filter(e=> e.status !== 'gozleyen')
+      let data = wait.concat(complated)
 
   return (
     <div className="home">
@@ -110,18 +58,17 @@ function Home() {
         <span>AXTAR</span>
 
         <select onChange={(e=> setFiltered(e.target.value))} className="form-select">
-          <option selected disabled>Statusa gore axtar</option>
-          <option value="hami">hami</option>
-          <option value="gozleyen">gozleyen</option>
+          <option selected disabled>Statusa gorə axtar</option>
+          <option value="hami">hamı</option>
+          <option value="gozleyen">gozləyən</option>
           <option value="sonlanan">sonlanan</option>
-          <option value="legv">legv</option>
+          <option value="legv">ləğv olanlar</option>
         </select>
       </div>
       <div className="table-data">
         <table className="table">
           <thead>
             <tr>
-              <th scope="col">Sıra sayı</th>
               <th scope="col">Masa</th>
               <th scope="col">Xidmətçi</th>
               <th scope="col">Status</th>
@@ -131,12 +78,11 @@ function Home() {
             </tr>
           </thead>
           <tbody>
-            {x.map((e) => {
+            {data.map((e) => {
               return (
                 <tr>
-                  <th scope="row">1</th>
-                  <td>{e.sira}</td>
                   <td>{e.masa}</td>
+                  <td>{e.xid}</td>
                   <td className="status">
                     {e.status==="sonlanan"
                     ?
@@ -153,10 +99,11 @@ function Home() {
                   <td>{e.mebleg}</td>
                   <td>{e.son}</td>
                   <td>
-                    <Link className="about-link" to="/order">
+                    <Link className="about-link" to={`/about/${e.sira}`}>
                       <i className="fa-solid fa-angle-right"></i>
                     </Link>
-                  </td>
+                  </td> 
+
                 </tr>
               );
             })}

@@ -7,9 +7,9 @@ const orderSlice = createSlice({
         {
             id:null,
             table:"",
-            employee:""
-        },
-        orders:[]
+            employee:"",
+            orders:[]
+        }
     },
     reducers:{
         setCurrentId:(state,action)=>

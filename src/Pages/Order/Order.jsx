@@ -7,14 +7,15 @@ import axios from "axios";
 import "../Order/Order.css";
 import validation from "../../validation/orderValidation";
 function Order() {
+
   const [emp, setEmp] = useState([]);
+  
   useEffect(() => {
     axios.get("./api/employee.json").then((resp) => setEmp(resp.data));
   }, []);
 
   const navigate = useNavigate();
   const dispath = useDispatch();
-  const x = useSelector(state => state.order.currentOrder)
   return (
     <div className="order">
       <Formik
@@ -23,9 +24,7 @@ function Order() {
           employee: "",
         }}
         onSubmit={(val) => {
-          dispath(setCurrentId((Math.random(1000)*100).toFixed()))
-          dispath(setCurrentTable(val.table))
-          dispath(setCurrentEmployee(val.employee))
+          localStorage.setItem("first-info",JSON.stringify(val))
           navigate("/product")
         }}
         validationSchema={validation}

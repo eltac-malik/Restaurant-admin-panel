@@ -31,11 +31,10 @@ function Product() {
         }
     }
     
-    console.log(basket);
     return (
         <div className='products'>
             <div className="basket">
-           <p onClick={()=>JSON.stringify(localStorage.setItem("basket",basket))}><Link className='basket-link' to='/basket'><span>Sifarişə bax</span><i className="fa-solid fa-2x fa-basket-shopping"></i> <sup>{basket.length}</sup></Link></p>
+           <p onClick={()=>(localStorage.setItem("basket",JSON.stringify(basket)))}><Link className='basket-link' to='/basket'><span>Sifarişə bax</span><i className="fa-solid fa-2x fa-basket-shopping"></i> <sup>{basket.length}</sup></Link></p>
             </div>
 
             <div className="p-cards">
