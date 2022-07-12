@@ -19,8 +19,18 @@ function Basket() {
 
     }
     ,[])
+
+    useEffect(() => {
+        localStorage.setItem("basket", basket)
+    }, [basket])
+
     let emp_info = emp.find(e=> e.name===empfind.employee)
     console.log(arr);
+
+    let handleDel = ()=>
+    {
+        
+    }
 
     return (
             <div className='last-basket'>
@@ -53,7 +63,7 @@ function Basket() {
                                                 <button onClick={()=> {
                                                     setBasket(basket.map(b => {
                                                         if (b.id == e.id) {
-                                                            return {...b, count : b.count > 0 ? b.count-1 : 0}
+                                                            return {...b, count : b.count > 1 ? b.count-1 : 1}
                                                         }
                                                         return b
                                                     }))
@@ -91,7 +101,6 @@ function Basket() {
                         <button onClick={()=>
                         {
                             let mebleg =0;
-                            console.log(basket);
                             basket.forEach(e=>
                                 {
                                     let price = Number(e.price)
