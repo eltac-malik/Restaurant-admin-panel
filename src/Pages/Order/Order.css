@@ -1,0 +1,189 @@
+.order
+{
+    width: 80%;
+    max-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.table-choose,
+.emp-choose
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid silver;
+}
+.sub-btn
+{
+    width: 90%;
+    background-color: red;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 20px;
+    outline: none;
+    color: white;
+    height: 50px;
+    background-color: rgba(0, 139, 139, 0.644);
+}
+.error
+{
+    color: red;
+}
+.products
+{
+    width: 80%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.basket
+{
+    z-index: 1;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0 100px;
+    background-color: rgba(0, 139, 139, 0.644);
+    border-left: 1px solid silver;
+    border-bottom: 1px solid silver;
+    color: white;
+}
+
+.basket p
+{
+    cursor: pointer;
+    padding: 2px 5px;
+    border: 1px solid white;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+.basket span
+{
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.basket sup
+{
+    font-size: 20px;
+}
+.basket-link
+{
+    text-decoration: none;
+    color: white;
+}
+.basket-link:hover
+{
+    text-decoration: none;
+    color: white;
+}
+
+.p-cards
+{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.p-card
+{
+    width: 300px;
+    height: 310px;
+    border: 1px solid rgba(0, 139, 139, 0.644);
+    margin: 10px;
+    background-color: rgba(238, 236, 236, 0.692);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 5px;
+}
+.p-img
+{
+    width: 150px;
+    height: 150px;
+    margin: 10px 0;
+    background-color: blue;
+}
+.p-img img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.p-card button
+{
+    width: 50%;
+    border: none;
+    outline: none;
+    padding: 10px 5px;
+    border-radius: 5px;
+    background-color: rgba(0, 139, 139, 0.644);
+    color: white;
+    font-size: 18px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.p-card button:hover
+{
+    background-color: rgba(1, 126, 126, 0.911);
+    transition: 0.3s;
+}
+
+.last-basket
+{
+    width: 100%;
+    display: flex;
+    padding-top: 20px;
+    align-items: center;
+    flex-direction: column;
+}
+
+.last-emp
+{
+    width: 80%;
+    height: 250px;
+    padding: 20px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+}
+.spe-emp
+{
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 80%;
+    border: 1px solid rgba(1, 126, 126, 0.911);
+    padding:15px;
+    border-radius: 10px;
+}
+.last-img
+{
+    width: 200px;
+    height: 190px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(1, 126, 126, 0.911);
+}
+.last-img img
+{
+    width: 100%;
+}
+.emp-h1
+{
+    color: rgba(1, 126, 126, 0.911);
+}

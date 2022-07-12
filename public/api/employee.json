@@ -1,0 +1,22 @@
+[
+    {
+        "id":1,
+        "image":"https://www.lstmed.ac.uk/sites/default/files/styles/280-3x4/public/content/person/images/Robert%20Leyland%20LR.jpg?itok=-ZeKqzo9",
+        "name":"Namiq Huseynov"
+    },
+    {
+        "id":2,
+        "image":"https://isgmh.northwestern.edu/files/2017/05/Morgan-Ethan-3x4-ym6s7f.jpg",
+        "name":"Elxan Memmedov"
+    },
+    {
+        "id":3,
+        "image":"https://live.staticflickr.com/8038/8003602413_7ac0db3c0b_b.jpg",
+        "name":"Gulnar Elesgerova"
+    },
+    {
+        "id":4,
+        "image":"https://i.pinimg.com/236x/d8/0a/27/d80a2730350d3668d2d760da8f35cba5--girl-hairstyles-j-law.jpg",
+        "name":"Nermin Baxsiyeva"
+    }
+]
