@@ -20,7 +20,7 @@ function App() {
       xid: "Elxan Memmedov",
       status: "gozleyen",
       mebleg: 23,
-      son: 12,
+      son: "15:20/3/6",
       basket:
       [    {
         "id": 7,
@@ -57,7 +57,7 @@ function App() {
       xid: "Namiq Huseynov",
       status: "sonlanan",
       mebleg: 203,
-      son: 12,
+      son: "12:20/3/6",
          basket:
       [    {
         "id": 7,
@@ -95,7 +95,7 @@ function App() {
       xid: "Gulnar Elesgerova",
       status: "legv",
       mebleg: 23,
-      son: 12,
+      son: "09:20/3/6",
       basket:
       [    {
         "id": 7,
@@ -133,7 +133,7 @@ function App() {
       xid: "Gulnar Elesgerova",
       status: "gozleyen",
       mebleg: 23,
-      son: 12,
+      son: "15:20/3/6",
       basket:
       [    {
         "id": 7,
@@ -171,7 +171,7 @@ function App() {
       xid: "Namiq Huseynov",
       status: "sonlanan",
       mebleg: 3,
-      son: 12,
+      son: "15:20/3/6",
       basket:
       [    {
         "id": 7,
@@ -209,7 +209,7 @@ function App() {
       xid: "Nermin Baxsiyeva",
       status: "legv",
       mebleg: 23,
-      son: 12,
+      son: "15:20/3/6",
       basket:
       [    {
         "id": 7,
@@ -247,7 +247,7 @@ function App() {
       xid: "Nermin Baxsiyeva",
       status: "sonlanan",
       mebleg: 23,
-      son: 12,
+      son: "15:20/3/6",
       basket:
       [    {
         "id": 7,

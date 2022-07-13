@@ -20,9 +20,6 @@ function Basket() {
     }
     ,[])
 
-    useEffect(() => {
-        localStorage.setItem("basket", basket)
-    }, [basket])
 
     let emp_info = emp.find(e=> e.name===empfind.employee)
     console.log(arr);
@@ -105,7 +102,7 @@ function Basket() {
                                 {
                                     let price = Number(e.price)
                                     let count = Number(e.count)
-                                    let sum = mebleg+e.price
+                                    let sum = mebleg+price*count
                                     mebleg = sum
                                     
                                 })
